@@ -21,6 +21,7 @@ public class FireballAgent : Agent
         //base.CollectObservations();
         string[] detectabelObjects = { "food", "badfood", "agent" };
         AddVectorObs(agentFB.gravityScale);
+        AddVectorObs(agentFB.position);
     }
 
     public override void AgentAction(float[] vectorAction, string textAction)
