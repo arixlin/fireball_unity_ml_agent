@@ -32,23 +32,26 @@ public class FireballAgent : Agent
         // 0 - Up, 1 - Down, 2 - Left, 3 - Right
         if (action == 3)
         {
-            agentFB.velocity = Vector2.right * 15f;
+            agentFB.velocity = Vector2.right * 30f;
+            //agentFB.AddForce(new Vector2(1f, 0f));
         }
         if (action == 2)
         {
-            agentFB.velocity = Vector2.left * 15f;
+            agentFB.velocity = Vector2.left * 30f;
+            //agentFB.AddForce(new Vector2(-1f, 0f));
         }
         if (action == 0)
         {
-            agentFB.velocity = Vector2.up * 15f;
+            agentFB.velocity = Vector2.up * 30f;
+            //agentFB.AddForce(new Vector2(0f, 1f));
         }
         if (action == 1)
         {
-            agentFB.velocity = Vector2.down * 15f;
+            agentFB.velocity = Vector2.down * 30f;
+            //agentFB.AddForce(new Vector2(0f, -1f));
         }
 
         EdgeProcess();
-        //agentFB.AddForce();
     }
 
     public override void AgentReset()
